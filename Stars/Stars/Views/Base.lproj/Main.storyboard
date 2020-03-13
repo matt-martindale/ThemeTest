@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Star View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StarViewController" customModule="Stars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EgH-gU-IO8">
+                                <rect key="frame" x="0.0" y="219" width="414" height="643"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StarCell" rowHeight="70" id="cPC-r6-Fzx" customClass="StarTableViewCell" customModule="Stars" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cPC-r6-Fzx" id="pQ2-I1-04d">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="41U-cy-lpc">
+                                                    <rect key="frame" x="16" y="14.5" width="382" height="41"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMo-gM-yja">
+                                                            <rect key="frame" x="0.0" y="0.0" width="81" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="distance in light years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0k-Jn-mpS">
+                                                            <rect key="frame" x="0.0" y="26.5" width="123.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="41U-cy-lpc" secondAttribute="trailing" constant="16" id="0y8-nI-Xfk"/>
+                                                <constraint firstItem="41U-cy-lpc" firstAttribute="centerY" secondItem="pQ2-I1-04d" secondAttribute="centerY" id="UHH-xI-up1"/>
+                                                <constraint firstItem="41U-cy-lpc" firstAttribute="leading" secondItem="pQ2-I1-04d" secondAttribute="leading" constant="16" id="XDM-iO-KA1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="d0k-Jn-mpS" id="Kz1-Rd-aIV"/>
+                                            <outlet property="nameLabel" destination="qMo-gM-yja" id="09e-Qp-bZn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-OY-bEh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="175"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="fgO-ej-yKS">
+                                        <rect key="frame" x="15" y="30" width="384" height="137"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Star Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8R-Fx-Ysa">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance in Light Years" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47t-oi-56I">
+                                                <rect key="frame" x="0.0" y="52" width="384" height="33"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xXX-CO-kt0">
+                                                <rect key="frame" x="0.0" y="104" width="384" height="33"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ron-bG-Mzy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="33"/>
+                                                        <color key="backgroundColor" red="0.77305102348327637" green="0.91698497533798218" blue="0.99218970537185669" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Print Stars"/>
+                                                        <connections>
+                                                            <action selector="printButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upP-re-Qan"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsO-Z7-G8I">
+                                                        <rect key="frame" x="202" y="0.0" width="182" height="33"/>
+                                                        <color key="backgroundColor" red="0.77305102348327637" green="0.91698497533798218" blue="0.99218970537185669" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Create"/>
+                                                        <connections>
+                                                            <action selector="createButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Sj-kS-jBI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fgO-ej-yKS" firstAttribute="leading" secondItem="MaT-OY-bEh" secondAttribute="leading" constant="15" id="1NX-Wk-Qfa"/>
+                                    <constraint firstItem="fgO-ej-yKS" firstAttribute="top" secondItem="MaT-OY-bEh" secondAttribute="top" constant="30" id="SeE-I9-zK0"/>
+                                    <constraint firstAttribute="trailing" secondItem="fgO-ej-yKS" secondAttribute="trailing" constant="15" id="nhQ-wt-3y9"/>
+                                    <constraint firstAttribute="height" constant="175" id="yeT-Bi-cXM"/>
+                                    <constraint firstAttribute="bottom" secondItem="fgO-ej-yKS" secondAttribute="bottom" constant="8" id="zjJ-0s-D8A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EgH-gU-IO8" firstAttribute="top" secondItem="MaT-OY-bEh" secondAttribute="bottom" id="1Cs-t2-BM6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MaT-OY-bEh" secondAttribute="trailing" id="Rc2-QY-MJU"/>
+                            <constraint firstItem="MaT-OY-bEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZN6-Rz-2XY"/>
+                            <constraint firstItem="EgH-gU-IO8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sD0-0Y-QfJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EgH-gU-IO8" secondAttribute="trailing" id="v9k-Y1-eRZ"/>
+                            <constraint firstItem="MaT-OY-bEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yTb-Nr-0Wc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EgH-gU-IO8" secondAttribute="bottom" id="yXi-dG-rAx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="distanceTextField" destination="47t-oi-56I" id="5F1-UY-Dnn"/>
+                        <outlet property="starNameTextField" destination="A8R-Fx-Ysa" id="Dgs-Hb-zwF"/>
+                        <outlet property="tableView" destination="EgH-gU-IO8" id="23j-EF-FVr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
